@@ -37,3 +37,27 @@ string appendAndDelete(string s, string t, int k)
     
     return result;
 }
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string s;
+    getline(cin, s);
+
+    string t;
+    getline(cin, t);
+
+    string k_temp;
+    getline(cin, k_temp);
+
+    int k = stoi(ltrim(rtrim(k_temp)));
+
+    string result = appendAndDelete(s, t, k);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
